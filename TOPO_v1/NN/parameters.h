@@ -4,14 +4,14 @@
 #include "ap_int.h"
 #include "ap_fixed.h"
 
-#include "nnet_utils/nnet_code_gen.h"
-#include "nnet_utils/nnet_helpers.h"
+#include "nn_utils/nnet_code_gen.h"
+#include "nn_utils/nnet_helpers.h"
 // hls-fpga-machine-learning insert includes
-#include "nnet_utils/nnet_activation.h"
-#include "nnet_utils/nnet_activation_stream.h"
-#include "nnet_utils/nnet_dense.h"
-#include "nnet_utils/nnet_dense_compressed.h"
-#include "nnet_utils/nnet_dense_stream.h"
+#include "nn_utils/nnet_activation.h"
+#include "nn_utils/nnet_activation_stream.h"
+#include "nn_utils/nnet_dense.h"
+#include "nn_utils/nnet_dense_compressed.h"
+#include "nn_utils/nnet_dense_stream.h"
  
 //hls-fpga-machine-learning insert weights
 #include "defines.h"
