@@ -1,5 +1,7 @@
 .PHONY: clean
 
+INCLUDES += -I$(CURDIR)/NN
+
 topo_v1.so: topo_emulator_v1.o topo_v1.o
 	$(CXX) $(CXXFLAGS) $(LD_FLAGS) -shared $^ -o $@
 
