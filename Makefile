@@ -5,7 +5,8 @@ EMULATOR_EXTRAS := ../../hls4mlEmulatorExtras
 AP_TYPES := $(EMULATOR_EXTRAS)/include/ap_types
 HLS_ROOT := ../../hls
 HLS4ML_INCLUDE := $(EMULATOR_EXTRAS)/include/hls4ml
-INCLUDES := -I$(HLS4ML_INCLUDE) -I$(AP_TYPES) -I$(HLS_ROOT)/include
+NN_INCLUDE := TOPO_v1/NN
+INCLUDES := -I$(HLS4ML_INCLUDE) -I$(AP_TYPES) -I$(HLS_ROOT)/include -I$(NN_INCLUDE)
 LD_FLAGS := -L$(EMULATOR_EXTRAS)/lib64 -lemulator_interface
 ALL_VERSIONS:=TOPO_v1/topo_v1.so 
 
