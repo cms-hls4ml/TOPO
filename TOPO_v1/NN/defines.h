@@ -18,6 +18,7 @@ static const int N_LAYER_11 = 1;
 
 // hls-fpga-machine-learning insert layer-precision
 typedef ap_fixed<16,6> input_t;
+typedef ap_fixed<23,23> unscaled_t;
 typedef ap_fixed<16,6> model_default_t;
 typedef ap_fixed<16,6> layer2_t;
 typedef ap_fixed<16,7> weight2_t;
