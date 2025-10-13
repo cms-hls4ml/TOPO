@@ -2,6 +2,7 @@
 #include "emulator.h" //include of emulator modeling
 #include <any>
 #include "ap_fixed.h"
+#include "scaling.h"
 
 using namespace hls4ml_topo_v1;
 
@@ -14,13 +15,10 @@ private:
     
     virtual void _scaleNNInputs(unscaled_t unscaled[N_INPUT_1_1], input_t scaled[N_INPUT_1_1])
     {
-        int norm[N_INPUT_1_1] = {256, 1, 64, 128, 256, 16, 32, 64, 128, 64, 64, 64, 64, 64, 32, 32, 64, 32, 32, 64};
-        int bias[N_INPUT_1_1] = {51, 0, 7, 0, 54, 1, 0, 11, 59, 0, 64, 33, 0, 49, 19, 0, 33, 10, 0, 20}; 
-
         for (int i = 0; i < N_INPUT_1_1; i++)
         {
-        double tmp0 = unscaled[i] - bias[i];
-        double tmp1 = tmp0 / norm[i];
+        double tmp0 = unscaled[i] - hls4ml_topo_v1::bias[i];
+        double tmp1 = tmp0 / hls4ml_topo_v1::norm[i];
         scaled[i] = static_cast<input_t>(tmp1);
         }
     }
