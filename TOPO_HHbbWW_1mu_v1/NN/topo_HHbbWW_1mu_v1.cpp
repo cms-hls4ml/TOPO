@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "topo_v1.h"
+#include "topo_HHbbWW_1mu_v1.h"
 #include "parameters.h"
 #include "defines.h"
 
-namespace hls4ml_topo_v1 {
+namespace hls4ml_topo_HHbbWW_1mu_v1 {
 
-void topo_v1(
+void topo_HHbbWW_1mu_v1(
     input_t munet_fc1_input[N_INPUT_1_1],
     result_t layer13_out[N_LAYER_11]
 ) {
@@ -56,4 +56,4 @@ void topo_v1(
 
 }
 
-} // namespace hls4ml_topo_v1
+} // namespace hls4ml_topo_HHbbWW_1mu_v1

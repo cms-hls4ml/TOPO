@@ -7,7 +7,7 @@
 #include <cstddef>
 #include <cstdio>
 
-namespace hls4ml_topo_v1 {
+namespace hls4ml_topo_HHbbWW_1mu_v1 {
 
 // hls-fpga-machine-learning insert numbers
 static const int N_INPUT_1_1 = 20;
@@ -18,6 +18,7 @@ static const int N_LAYER_11 = 1;
 
 // hls-fpga-machine-learning insert layer-precision
 typedef ap_fixed<16,6> input_t;
+typedef ap_fixed<23,23> unscaled_t;
 typedef ap_fixed<16,6> model_default_t;
 typedef ap_fixed<16,6> layer2_t;
 typedef ap_fixed<16,7> weight2_t;
@@ -53,5 +54,5 @@ extern bias5_t b5[32];
 extern bias8_t b8[32];
 extern bias11_t b11[1];
 
-} // namespace hls4ml_topo_v1
+} // namespace hls4ml_topo_HHbbWW_1mu_v1
 #endif
